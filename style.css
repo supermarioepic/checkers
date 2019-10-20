@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  padding-top: 7.3%;
+  padding-left: 7.3%;
+  display: grid;
+  background: url("images/000040_wood_texture.jpg") center no-repeat;
+  background-size: 300%;
+}
+.checkers {
+  margin: auto;
+  height: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.square:nth-child(even) {
+  background: green;
+}
+.square:nth-child(odd) {
+  background: white;
+  border: 1px solid;
+  border-radius: 2%;
+}
+
+img {
+    position: absolute;
+    top: auto;
+    left: auto;
+    height: 66.5px;
+    width: 66.5px;
+    cursor: pointer;
+}
+
+.square:nth-child(even):hover img {
+    transition: all 0.3s;
+    transform: scale(1.2);
+}
